@@ -1,0 +1,48 @@
+.sec-profile {
+  width: 40rem;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(106, 55, 198, 1) 29%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: aliceblue;
+}
+
+.wrapper-profile {
+  width: 20rem;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.wrapper-desc {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.name-profile {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.desc-profile {
+  margin-top: 1rem;
+}
+
+.list-sns {
+  display: flex;
+  margin: 2rem;
+  justify-content: space-around;
+  font-weight: 700;
+}
