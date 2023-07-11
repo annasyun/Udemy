@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function Btn({ text, backgroundColor, fontSize, handleClick }) {
+        return (
+          <button
+            style={{
+              backgroundColor: backgroundColor,
+              color: "white",
+              fontSize: fontSize,
+              padding: "5px 10px",
+              border: 0,
+              borderRadius: "10px",
+              margin: "3px",
+            }}
+            onClick={handleClick}
+          >
+            {text}
+          </button>
+        );
+      }
+
+      function UserProfile({ name, age, work }) {
+        return (
+          <div>
+            <p>이름은 {name}입니다.</p>
+            <p>나이는 {age}세 입니다.</p>
+            <p>직업은 {work}입니다.</p>
+          </div>
+        );
+      }
+      function App() {
+        const [counter, setCounter] = React.useState(0);
+        const handleCounter = () => {
+          setCounter((counter) => counter + 1);
+        };
+        const handleBye = () => {
+          console.log("byee");
+          alert("byee");
+        };
+        return (
+          <>
+            {counter}
+            <button onClick={handleCounter}>plus</button>
+            <br />
+            <Btn backgroundColor="red" text="hello" />
+            <Btn backgroundColor="red" text="bye" handleClick={handleBye} />
+            <UserProfile name={"푸바오"} age={20} work={"dev"} />
+          </>
+        );
+      }
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

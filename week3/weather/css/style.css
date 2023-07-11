@@ -1,0 +1,17 @@
+body {
+  color: aliceblue;
+  text-shadow: 2px 2px #938f8f;
+}
+
+.hidden {
+  display: none;
+}
+
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+}

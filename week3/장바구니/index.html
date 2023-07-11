@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <h2 class="product-name">사과</h2>
+        <p class="product-price">1000원</p>
+        <button class="add-to-cart">장바구니 추가</button>
+      </div>
+      <div>
+        <h2 class="product-name">바나나</h2>
+        <p class="product-price">1500원</p>
+        <button class="add-to-cart">장바구니 추가</button>
+      </div>
+    </div>
+    <div class="cart">
+      <h2>장바구니</h2>
+      <ul class="cart-items"></ul>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll(".add-to-cart");
+      buttons.forEach((button) => {
+        button.addEventListener("click", addCart);
+      });
+
+      function addCart(event) {
+        const button = event.target;
+        const productDiv = button.parentNode;
+        const productName = productDiv.querySelector(".product-name").innerText;
+        const productPrice =
+          productDiv.querySelector(".product-price").innerText;
+        const cartItems = document.querySelector(".cart-items");
+
+        const listItem = document.createElement("li");
+        listItem.innerText = `${productName} - ${productPrice}`;
+        cartItems.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>

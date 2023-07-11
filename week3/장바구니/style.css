@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.wrapper div {
+  border: 1px solid black;
+  width: 400px;
+  height: 150px;
+}
+
+li {
+  list-style: none;
+}
